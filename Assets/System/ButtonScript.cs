@@ -6,6 +6,8 @@ public class ButtonScript : MonoBehaviour
 {
     public MovablePlaform platform;
 
+    public Animator animator;
+
     private bool isNearPlayer = false;
 
     // Update is called once per frame
@@ -14,8 +16,9 @@ public class ButtonScript : MonoBehaviour
         if (isNearPlayer) { 
             if (Input.GetButtonDown("ButtonPress"))
             {
-                Debug.Log("E");
+
                 platform.Activate();
+                animator.SetBool("IsPressed", true);
             }
         }
     }

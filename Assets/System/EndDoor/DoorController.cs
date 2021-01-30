@@ -9,12 +9,15 @@ public class DoorController : MonoBehaviour
 
     public void Open()
     {
+        Debug.Log("open");
         animator.SetBool("Completed", true);
+        GetComponent<Collider2D>().enabled = false;
 
     }
     public void Close()
     {
-        animator.SetBool("IsJumping", false);
+        animator.SetBool("Completed", false);
+        GetComponent<Collider2D>().enabled = true;
 
     }
 }

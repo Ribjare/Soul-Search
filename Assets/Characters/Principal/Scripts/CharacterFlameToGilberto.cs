@@ -9,7 +9,7 @@ public class CharacterFlameToGilberto : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Personality"))
+        if (collision.CompareTag("SensitivePersonality"))
         {
             Instantiate(mainCharacter, collision.transform.position, Quaternion.identity);
             Destroy(gameObject);

@@ -15,13 +15,17 @@ public class CharacterPowers : MonoBehaviour
     private bool hasPersonalitySensitive = false;
     private bool hasPersonalityBrave = false;
 
-    //private List<GameObject> personalities = new List<GameObject>();
 
     Collider2D nearWall;
+
+    private Rigidbody2D rb2D;
+    private float thrust = 10.0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -38,6 +42,16 @@ public class CharacterPowers : MonoBehaviour
                hasPersonalitySensitive = false;
             }
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            // check is we have sensitive personality and are near wall
+            if (hasPersonalityBrave)
+            {
+                rb2D.AddForce(transform.up * thrust, ForceMode2D.Impulse);
+                Instantiate(personalityBravePrefat, wherePersonalitiesDrop.position, Quaternion.identity);
+                hasPersonalityBrave = false;
+            }
+        }
 
     }
 
@@ -47,18 +61,30 @@ public class CharacterPowers : MonoBehaviour
             nearWall = collision;
             return;
         }
-        if (collision.CompareTag("Personality")){
+        if (collision.CompareTag("SensitivePersonality")){
             hasPersonalitySensitive = true;
+            Destroy(collision.gameObject);
+
+            return;
+        }
+        if (collision.CompareTag("BravePersonality"))
+        {
+            hasPersonalityBrave = true;
             Destroy(collision.gameObject);
 
             return;
         }
         if (collision.CompareTag("EndLevelDoor"))
         {
-            if(hasPersonalitySensitive)
+            Debug.Log(hasPersonalitySensitive);
+            if (hasPersonalitySensitive) { 
+                Debug.Log("abertop");
                 collision.GetComponent<DoorController>().Open();
-            else
+            }
+            else { 
                 collision.GetComponent<DoorController>().Close();
+                Debug.Log("fecha");
+            }
 
         }
     }

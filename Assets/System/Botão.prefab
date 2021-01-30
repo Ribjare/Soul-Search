@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5398890973073189699}
   - component: {fileID: 5398890973073189698}
   - component: {fileID: 5398890973073189709}
+  - component: {fileID: 246801967}
   m_Layer: 0
   m_Name: "Bot\xE3o"
   m_TagString: Untagged
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a7b6298a876b1474293819e80bccb245, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: f47ac849b3abd6b40be7c0ab4e6e9c51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platform: {fileID: 0}
+  animator: {fileID: 246801967}
 --- !u!61 &5398890973073189709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,3 +124,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.133317, y: 4.416317}
   m_EdgeRadius: 0
+--- !u!95 &246801967
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398890973073189708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 614d4f5a5eaa7d549b8f1eda379d5839, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

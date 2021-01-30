@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
-  - Personality
   - Key
   - Cage
   - EndLevelDoor
+  - SensitivePersonality
+  - BravePersonality
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 3577835893
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 2144919883
     locked: 0
