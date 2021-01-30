@@ -22,6 +22,6 @@ public class NextLevelScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(nextLevel);
     }
 }
