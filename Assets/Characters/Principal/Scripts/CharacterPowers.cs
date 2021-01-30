@@ -41,10 +41,20 @@ public class CharacterPowers : MonoBehaviour
     {
         if (collision.CompareTag("Wall")) { 
             nearWall = collision;
+            return;
         }
         if (collision.CompareTag("Personality")){
             hasPersonality = true;
             Destroy(collision.gameObject);
+            return;
+        }
+        if (collision.CompareTag("EndLevelDoor"))
+        {
+            if(hasPersonality)
+                collision.GetComponent<DoorController>().Open();
+            else
+                collision.GetComponent<DoorController>().Close();
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

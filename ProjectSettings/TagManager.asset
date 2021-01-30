@@ -8,6 +8,7 @@ TagManager:
   - Personality
   - Key
   - Cage
+  - EndLevelDoor
   layers:
   - Default
   - TransparentFX

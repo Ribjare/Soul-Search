@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EndLevel : MonoBehaviour
+public class NextLevelScript : MonoBehaviour
 {
 
-    private bool playerIsCompleted = false;
-    
+    public string nextLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +17,11 @@ public class EndLevel : MonoBehaviour
     void Update()
     {
         
+
     }
 
-
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }
