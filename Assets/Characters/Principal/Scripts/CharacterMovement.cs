@@ -25,6 +25,8 @@ public class CharacterMovement : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
+            FindObjectOfType<AudioManager>().Play("Salto");
+
         }
         /**
         if (Input.GetButtonDown("Crouch"))

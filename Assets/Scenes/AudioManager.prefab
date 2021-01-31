@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &517041249641895597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517041249641895507}
+  - component: {fileID: 517041249641895596}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &517041249641895507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517041249641895597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.2952425, y: 0.32603735, z: -370.91406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &517041249641895596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517041249641895597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a2284f1659e354bb99334a4599e166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: ee9dbc21c02f96b4a9fa7f44ea83b53b, type: 3}
+    volume: 0.466
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: AbrirGaiola
+    clip: {fileID: 8300000, guid: 7a50154cee2394c429f665d63cccadee, type: 3}
+    volume: 0.466
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ApanharChave
+    clip: {fileID: 8300000, guid: 6c6fb7ac915dce04c9ed1991fd766125, type: 3}
+    volume: 0.466
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Butao
+    clip: {fileID: 8300000, guid: fe4db72c54d48c24aaaa23a44094be91, type: 3}
+    volume: 0.466
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Cagar
+    clip: {fileID: 8300000, guid: d7d34c4086f3f7f4c92db92ffe985eec, type: 3}
+    volume: 0.466
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PortaAbrir
+    clip: {fileID: 8300000, guid: 471964910408e6e45bb98fe71729aa5c, type: 3}
+    volume: 0.466
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Salto
+    clip: {fileID: 8300000, guid: c0921addf2be63646bb24b0e15ae52c9, type: 3}
+    volume: 0.466
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Boost
+    clip: {fileID: 8300000, guid: b888c13c27c85a74b9bd381c3e13d2d6, type: 3}
+    volume: 0.466
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}

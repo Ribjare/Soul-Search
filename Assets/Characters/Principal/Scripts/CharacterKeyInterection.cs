@@ -21,6 +21,8 @@ public class CharacterKeyInterection : MonoBehaviour
         if (collision.CompareTag("Key"))
         {
             collision.transform.parent = GetComponent<Transform>();
+            FindObjectOfType<AudioManager>().Play("ApanharChave");
+
         }
     }
 }

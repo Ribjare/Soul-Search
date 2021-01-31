@@ -13,6 +13,8 @@ public class Cage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Key")) {
+            FindObjectOfType<AudioManager>().Play("AbrirGaiola");
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

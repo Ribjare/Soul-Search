@@ -19,6 +19,8 @@ public class ButtonScript : MonoBehaviour
 
                 platform.Activate();
                 animator.SetBool("IsPressed", true);
+                FindObjectOfType<AudioManager>().Play("Butao");
+
             }
         }
     }

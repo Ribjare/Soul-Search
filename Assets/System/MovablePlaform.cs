@@ -12,6 +12,8 @@ public class MovablePlaform : MonoBehaviour
     public void Activate()
     {
         isActive = true;
+        FindObjectOfType<AudioManager>().Play("PlataformaAMover");
+
     }
     private void Update()
     {

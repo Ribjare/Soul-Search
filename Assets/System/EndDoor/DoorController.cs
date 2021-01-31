@@ -16,6 +16,7 @@ public class DoorController : MonoBehaviour
         Debug.Log("open");
         animator.SetBool("Completed", personalityCheck);
         var lsit = GetComponents<Collider2D>();
+        FindObjectOfType<AudioManager>().Play("PortaAbrir");
 
         foreach (Collider2D elem in lsit)
         {

@@ -58,6 +58,7 @@ public class CharacterPowers : MonoBehaviour
                Instantiate(personalitySensitivePrefat, wherePersonalitiesDrop.position, Quaternion.identity);
                HasPersonalitySensitive = false;
                canvas.setSensitiveActive(false);
+                FindObjectOfType<AudioManager>().Play("Cagar");
             }
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -69,6 +70,8 @@ public class CharacterPowers : MonoBehaviour
                 Instantiate(personalityBravePrefat, wherePersonalitiesDrop.position, Quaternion.identity);
                 HasPersonalityBrave = false;
                 canvas.setBraveActive(false);
+                FindObjectOfType<AudioManager>().Play("Cagar");
+                FindObjectOfType<AudioManager>().Play("Boost");
 
             }
         }
@@ -97,21 +100,6 @@ public class CharacterPowers : MonoBehaviour
 
             return;
         }
-        /**
-        if (collision.CompareTag("EndLevelDoor"))
-        {
-            Debug.Log(HasPersonalitySensitive);
-            if (HasPersonalitySensitive) { 
-                Debug.Log("abertop");
-                collision.GetComponent<DoorController>().Open();
-            }
-            else { 
-                collision.GetComponent<DoorController>().Close();
-                Debug.Log("fecha");
-            }
-
-        }
-        */
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
