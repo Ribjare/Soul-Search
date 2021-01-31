@@ -1080,6 +1080,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 302416985, guid: 368d45996e876b845836f80b996fce91, type: 3}
+      propertyPath: checkForBrave
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1588942953738936438, guid: 368d45996e876b845836f80b996fce91,
         type: 3}
       propertyPath: nextLevel
