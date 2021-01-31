@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Cursor.visible = false;
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("FirstAnimation");
     }
 
     public void ShowControls()
