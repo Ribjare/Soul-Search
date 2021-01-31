@@ -12,8 +12,8 @@ public class CharacterPowers : MonoBehaviour
     // Spawn Points
     public Transform wherePersonalitiesDrop;
 
-    private bool hasPersonalitySensitive = false;
-    private bool hasPersonalityBrave = false;
+    public bool hasPersonalitySensitive = false;
+    public bool hasPersonalityBrave = false;
 
 
     Collider2D nearWall;
@@ -40,6 +40,9 @@ public class CharacterPowers : MonoBehaviour
                 break;
             }
         }
+        //initializes the canvas
+        canvas.setSensitiveActive(HasPersonalitySensitive);
+        canvas.setBraveActive(HasPersonalityBrave);
     }
 
     // Update is called once per frame
@@ -54,7 +57,7 @@ public class CharacterPowers : MonoBehaviour
                nearWall.isTrigger = true;
                Instantiate(personalitySensitivePrefat, wherePersonalitiesDrop.position, Quaternion.identity);
                HasPersonalitySensitive = false;
-                canvas.setSensitiveActive(false);
+               canvas.setSensitiveActive(false);
             }
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -94,6 +97,7 @@ public class CharacterPowers : MonoBehaviour
 
             return;
         }
+        /**
         if (collision.CompareTag("EndLevelDoor"))
         {
             Debug.Log(HasPersonalitySensitive);
@@ -107,6 +111,7 @@ public class CharacterPowers : MonoBehaviour
             }
 
         }
+        */
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

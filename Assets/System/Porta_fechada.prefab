@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7362751128685231936}
   - component: {fileID: 302416984}
   - component: {fileID: 302416985}
+  - component: {fileID: 8068866745571712390}
   m_Layer: 0
   m_Name: Porta_fechada
   m_TagString: EndLevelDoor
@@ -143,6 +144,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 302416984}
+  checkForSensitive: 1
+  checkForBrave: 1
+--- !u!61 &8068866745571712390
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588942954041353248}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 7.323249}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.4, y: 9}
+    newSize: {x: 14.4, y: 9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.4098947, y: 23.646486}
+  m_EdgeRadius: 0
 --- !u!1 &2723742585750050851
 GameObject:
   m_ObjectHideFlags: 0
